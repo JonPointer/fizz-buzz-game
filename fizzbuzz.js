@@ -9,20 +9,21 @@ const { NumberPrompt } = require('enquirer');
 
 const prompt = new NumberPrompt({
     name: 'number',
-    message: 'Please enter max integer for the Fizz-Buzz Simulator (decimal numbers will be truncated):'
+    message: 'Please enter your max integer for the Fizz-Buzz Simulator (decimal numbers will be truncated):'
 });
 
 prompt.run()
     .then(answer => {
+        // Fizz-Buzz Loop
         for (let i = 1; i <= answer; i++) {
             if (((i % 3) === 0) && ((i % 5) !== 0)) {
-                console.log("fizz");
+                console.log("Fizz");
             }
             else if (((i % 3) !== 0) && ((i % 5) === 0)) {
-                console.log("buzz");
+                console.log("Buzz");
             }
             else if (((i % 3) === 0) && ((i % 5) === 0)) {
-                console.log("fizz-buzz");
+                console.log("Fizz-Buzz");
             }
             else {
                 console.log(i)
