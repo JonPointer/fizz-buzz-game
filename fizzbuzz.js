@@ -9,7 +9,7 @@ const { NumberPrompt } = require('enquirer');
 
 const prompt = new NumberPrompt({
     name: 'number',
-    message: 'Please enter max number you would like output up to:'
+    message: 'Please enter max integer for the Fizz-Buzz Simulator (decimal numbers will be truncated):'
 });
 
 prompt.run()
